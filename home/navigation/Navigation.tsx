@@ -9,6 +9,7 @@ import { createStackNavigator, TransitionPresets } from '@react-navigation/stack
 import * as React from 'react';
 import { Platform, StyleSheet, Linking } from 'react-native';
 import { DiagnosticsStackScreen } from 'screens/DiagnosticsScreen';
+import { FeedbackFormScreen } from 'screens/FeedbackFormScreen';
 
 import BottomTab, { getNavigatorProps } from './BottomTabNavigator';
 import { HomeStackRoutes, SettingsStackRoutes, ModalStackRoutes } from './Navigation.types';
@@ -92,6 +93,13 @@ function HomeStackScreen() {
         component={BranchDetailsScreen}
         options={{
           title: 'Branch',
+        }}
+      />
+      <HomeStack.Screen
+        name="FeedbackForm"
+        component={FeedbackFormScreen}
+        options={{
+          title: 'Share your feedback',
         }}
       />
     </HomeStack.Navigator>
